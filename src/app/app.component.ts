@@ -1,23 +1,13 @@
-import { Component, Injector, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
-
-import { ChildComponent } from './child/child.component'
-import { SimpleService } from './servicies/simple.service'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ChildComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [SimpleService],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   public title = 'angular-setup'
-
-  constructor(private injector: Injector) {}
-
-  public ngOnInit(): void {
-    console.log(this)
-  }
 }
