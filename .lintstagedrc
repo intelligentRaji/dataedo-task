@@ -1,0 +1,5 @@
+{
+  "src/**/*.{js,ts}": "npx eslint --fix",
+  "*.scss": "npx stylelint --fix",
+  "*": "npx prettier --list-different --write"
+}
